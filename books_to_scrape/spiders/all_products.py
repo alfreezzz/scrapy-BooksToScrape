@@ -36,10 +36,11 @@ class AllProductsSpider(CrawlSpider):
             rating = 5
 
         price = response.xpath("//p[@class='price_color']/text()").get()
-
+        category = response.xpath("//ul[@class='breadcrumb']/li[3]/a/text()").get()
         yield {
             "title": title,
             "stock": stock,
             "rating": rating,
             "price": price,
+            "category": category
         }
