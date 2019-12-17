@@ -11,14 +11,15 @@ This is some function of this project
  
     >>> import pandas as pd
     >>> df = pd.read_json("result_all_products.json")
-    >>> 
     >>> df.head()
-                                                   title  stock  rating   price
-    0                               A Light in the Attic     22       3  £51.77
-    1  Scott Pilgrim's Precious Little Life (Scott Pi...     19       5  £52.29
-    2  Our Band Could Be Your Life: Scenes from the A...     19       3  £57.25
-    3                            It's Only the Himalayas     19       2  £45.17
-    4                          Rip it Up and Start Again     19       5  £35.02
+                                                   title  stock  rating   price        category
+    0                               A Light in the Attic     22       3  £51.77          Poetry
+    1  Scott Pilgrim's Precious Little Life (Scott Pi...     19       5  £52.29  Sequential Art
+    2                                        Set Me Free     19       5  £17.46     Young Adult
+    3                              Shakespeare's Sonnets     19       4  £20.66          Poetry
+    4     Starving Hearts (Triangular Trade Trilogy, #1)     19       2  £13.99         Default
+    >>> 
+
     
   </li>
   
