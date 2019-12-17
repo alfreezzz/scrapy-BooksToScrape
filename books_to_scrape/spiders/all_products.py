@@ -11,6 +11,7 @@ class AllProductsSpider(CrawlSpider):
 
     rules = (
         Rule(LinkExtractor(restrict_xpaths='//ol/li/article/h3/a'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(restrict_xpaths="//li[@class='next']/a"))
     )
 
 
