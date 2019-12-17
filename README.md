@@ -7,9 +7,8 @@ This is some function of this project
     To get all of products, use this command<br>
     <b><i>scrapy crawl all_products -o result_all_products.json</i></b>
     <br><br>
-    After get the json output, you can analyze the result using data science tool like pandas
-    
-    ```
+    After get the json output, you can analyze the result using data science tool like pandas   
+ 
     >>> import pandas as pd
     >>> df = pd.read_json("result_all_products.json")
     >>> 
@@ -20,7 +19,7 @@ This is some function of this project
     2  Our Band Could Be Your Life: Scenes from the A...     19       3  £57.25
     3                            It's Only the Himalayas     19       2  £45.17
     4                          Rip it Up and Start Again     19       5  £35.02
-    ```
+    
   </li>
   
 </ul>
