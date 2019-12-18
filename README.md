@@ -22,5 +22,24 @@ This is some function of this project
 
     
   </li>
-  
+  <br>
+  <li>
+    To get all of products based on categories, use this command<br>
+    <b><i>scrapy crawl book_categories -o result_book_categories.json</i></b>
+    <br><br>
+    After get the json output, you can analyze the result using data science tool like pandas   
+ 
+    >>> import pandas as pd
+    >>> pd = pd.read_json("result_book_categories.json")
+    >>> pd.head()
+         category_name                                               data
+    0           Travel  [{'book_title': 'It's Only the Himalayas', 'bo...
+    1       Nonfiction  [{'book_title': 'Worlds Elsewhere: Journeys Ar...
+    2         Religion  [{'book_title': 'Don't Be a Jerk: And Other Pr...
+    3        New Adult  [{'book_title': 'Without Borders (Wanderlove #...
+    4  Science Fiction  [{'book_title': 'Mesaerion: The Best Science F...
+    >>> 
+
+    
+  </li>
 </ul>
