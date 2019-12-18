@@ -16,6 +16,7 @@ class AllProductsSpider(CrawlSpider):
 
 
     def parse_item(self, response):
+        category = response.xpath("//ul[@class='breadcrumb']/li[3]/a/text()").get()
         title = response.xpath("//div[@class='col-sm-6 product_main']/h1/text()").get()
         
         # Get Stock
@@ -35,12 +36,23 @@ class AllProductsSpider(CrawlSpider):
         elif rating.lower() == "five":
             rating = 5
 
-        price = response.xpath("//p[@class='price_color']/text()").get()
-        category = response.xpath("//ul[@class='breadcrumb']/li[3]/a/text()").get()
+
+        upc = response.xpath("//table[@class='table table-striped']/tr[1]/td/text()").get()
+        product_type = response.xpath("//table[@class='table table-striped']/tr[2]/td/text()").get()
+        price_excl_tax = response.xpath("//table[@class='table table-striped']/tr[3]/td/text()").get()
+        price_incl_tax = response.xpath("//table[@class='table table-striped']/tr[4]/td/text()").get()
+        tax = response.xpath("//table[@class='table table-striped']/tr[5]/td/text()").get()
+        number_of_reviews = response.xpath("//table[@class='table table-striped']/tr[7]/td/text()").get()
+
         yield {
+            "category": category,
             "title": title,
             "stock": stock,
             "rating": rating,
-            "price": price,
-            "category": category
+            "upc": upc,
+            "product_type": product_type,
+            "price_excl_tax": price_excl_tax,
+            "price_incl_tax": price_incl_tax,
+            "tax": tax,
+            "number_of_reviews": number_of_reviews,
         }
