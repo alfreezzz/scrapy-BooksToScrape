@@ -10,14 +10,16 @@ This is some function of this project
     After get the json output, you can analyze the result using data science tool like pandas   
  
     >>> import pandas as pd
-    >>> df = pd.read_json("result_all_products.json")
+    >>> df =pd.read_json("result_all_products.json")
     >>> df.head()
-                                                   title  stock  rating   price        category
-    0                               A Light in the Attic     22       3  £51.77          Poetry
-    1  Scott Pilgrim's Precious Little Life (Scott Pi...     19       5  £52.29  Sequential Art
-    2                                        Set Me Free     19       5  £17.46     Young Adult
-    3                              Shakespeare's Sonnets     19       4  £20.66          Poetry
-    4     Starving Hearts (Triangular Trade Trilogy, #1)     19       2  £13.99         Default
+              category                                              title  stock  rating               upc product_type price_excl_tax price_incl_tax    tax  number_of_reviews
+    0           Poetry                               A Light in the Attic     22       3  a897fe39b1053632        Books         £51.77         £51.77  £0.00                  0
+    1   Sequential Art  Scott Pilgrim's Precious Little Life (Scott Pi...     19       5  3b1c02bac2a429e6        Books         £52.29         £52.29  £0.00                  0
+    2            Music                          Rip it Up and Start Again     19       5  a34ba96d4081e6a4        Books         £35.02         £35.02  £0.00                  0
+    3           Poetry                                               Olio     19       1  feb7cc7701ecf901        Books         £23.88         £23.88  £0.00                  0
+    4  Science Fiction  Mesaerion: The Best Science Fiction Stories 18...     19       1  e30f54cea9b38190        Books         £37.59         £37.59  £0.00                  0
+    >>> 
+
     >>> 
 
     
